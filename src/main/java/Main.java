@@ -7,8 +7,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Main {
-    private static final String SUPABASE_URL = "https://tmtzwnkcensdrqzwstau.supabase.co";
-    private static final String SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRtdHp3bmtjZW5zZHJxendzdGF1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzgwNTEzMTgsImV4cCI6MjA1MzYyNzMxOH0.gp6A_E6Dn1bU04nA09P-EHRzVAk0GStHVpxsg9iSa1Y";
+    private static final String SUPABASE_URL = System.getenv("SUPABASE_URL");
+    private static final String SUPABASE_KEY = System.getenv("SUPABASE_KEY");
     private static final String TABLE_NAME = "users";
     private static final OkHttpClient client = new OkHttpClient();
     private static final Gson gson = new Gson();
